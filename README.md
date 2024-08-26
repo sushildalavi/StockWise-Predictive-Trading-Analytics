@@ -1,50 +1,71 @@
-# StockMarketAnalyzer: Predictive Stock Trading and Analysis System
+# StockWise: Predictive Trading Analytics
 
-## Overview
-The **StockMarketAnalyzer** is a C and OpenGL-based program designed to simulate stock trading, enabling users to predict potential profits or losses based on historical price data. The project provides a simple algorithmic approach to assist users in making informed trading decisions while managing a budget effectively. It also visualizes stock price trends and user transactions, enhancing the overall user experience.
+**StockWise** is a comprehensive stock market analysis tool designed to help users make informed decisions by analyzing stock prices over a specified period. This project utilizes algorithmic strategies to predict potential profits and optimize stock transactions based on historical data.
 
 ## Features
-- **Stock Price Simulation**: Allows users to input stock prices over a selected period (daily prices for a month) and perform buying and selling transactions based on these prices.
-- **Budget Management**: Users can set an initial budget, and the program ensures that transactions stay within this budget, warning the user if they attempt to exceed it.
-- **Profit/Loss Calculation**: The program calculates and displays the user's profit or loss based on their trading decisions at the end of the period.
-- **Predictive Analysis**: Uses simple predictive algorithms to estimate potential profits by analyzing past stock price trends.
-- **Graphical Visualization**: Visual representation of stock price trends over time, along with markers for user transactions, utilizing OpenGL for rendering.
-- **Customizable Transactions**: Users can buy or sell stocks on any given day within the month, with the flexibility to exit the simulation at any point.
 
-## Installation
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/StockMarketAnalyzer.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd StockMarketAnalyzer
-    ```
-3. Compile the code using a C compiler:
-    ```bash
-    gcc -o StockMarketAnalyzer main.c -lgraph
-    ```
-4. Run the executable:
-    ```bash
-    ./StockMarketAnalyzer
-    ```
+- **Daily Stock Price Analysis**: Import and analyze stock prices over a user-defined period.
+- **Budget Management**: Incorporate budget constraints to simulate realistic trading scenarios.
+- **Profit Prediction**: Calculate potential profits using a dynamic trading strategy.
+- **Graphical Visualization**: Visualize stock price trends and trading decisions with graphical plots.
+- **Decision Support**: Receive optimal buy/sell recommendations based on price movements and transaction history.
 
-## Usage
-1. The program will prompt you to enter the month and year of the transaction period.
-2. Input the daily stock prices for the chosen month (or load from a file).
-3. Set your budget for the month.
-4. Enter your initial stock purchase details.
-5. Continue buying or selling stocks based on the daily prices, while managing your budget.
-6. At the end of the period, the program will calculate your total profit or loss and predict potential profits using its algorithm.
+## Project Structure
 
-## Example
-Enter month of transaction: 3 Enter year of transaction: 2023 Stock price for 31 days Enter budget for the month: 10000 Enter initial number of stocks: 50 Enter initial date of purchase: 1
+- **Input Handling**: 
+  - Accepts daily stock prices from a text file.
+  - Allows users to input a budget for the trading period.
+  
+- **Algorithm Implementation**:
+  - Analyzes stock prices to identify key transaction points.
+  - Predicts potential profits by simulating buy/sell operations.
+  
+- **Graphical Output**:
+  - Utilizes graphics libraries to plot stock price movements and visualize transactions.
+  
+- **Transaction Records**:
+  - Maintains a detailed record of all buy/sell operations.
+  - Provides feedback on whether transactions fit within the budget.
 
-vbnet
-Copy code
-The program will then proceed to simulate your trading experience, allowing you to make purchase and sale decisions while visualizing your potential profits or losses.
+## Getting Started
+
+### Prerequisites
+
+- **C Compiler**: Ensure you have a C compiler installed, such as GCC.
+- **Graphics Library**: For graphical output, install a graphics library compatible with your system, such as BGI.
+
+### Running the Program
+
+1. **Compile the Program**:
+   ```bash
+   gcc stockwise.c -o stockwise -lgraph
+   ```
+2. **Prepare the Input File**:
+   - Create a text file (`stock_prices.txt`) containing daily stock prices, with each price separated by a comma.
+   
+3. **Execute the Program**:
+   ```bash
+   ./stockwise
+   ```
+4. **Follow the Prompts**:
+   - Enter the month and year of the transactions.
+   - Input your budget and the initial stock details.
+   - Choose to buy, sell, or exit based on the program’s recommendations.
+
+### Example
+
+After running the program, you'll receive outputs like:
+
+- **Amount Spent**: The total amount spent or earned during the transactions.
+- **Stock Value at Hand**: The current value of the stocks held.
+- **Predicted Profit**: The calculated profit based on the predicted transactions.
 
 ## Future Enhancements
-- **Advanced Predictive Models**: Incorporating more sophisticated algorithms like moving averages or regression analysis for more accurate profit predictions.
-- **Enhanced Visualization**: Adding more detailed graphs and charts, including candlestick charts, for better stock price analysis.
-- **User Interface Improvements**: Developing a more user-friendly interface with better interaction and clearer prompts.
+
+- **Machine Learning Integration**: Implement predictive models to enhance trading recommendations.
+- **Real-time Data Integration**: Fetch real-time stock prices for dynamic analysis.
+- **User Interface**: Develop a user-friendly GUI for better interaction and visualization.
+
+## Contribution
+
+Contributions are welcome! If you'd like to improve or add features to **StockWise**, feel free to fork the repository and submit a pull request.
